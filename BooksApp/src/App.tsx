@@ -25,6 +25,7 @@ import { AddToBook } from './components/AddToBook';
 import Menu from './components/Menu';
 import Inbox from './components/Inbox';
 import DefaultPage from './components/DefaultPage';
+import Villas from './components/Villas';
 
 setupIonicReact();
 
@@ -48,6 +49,9 @@ const App: React.FC = () => (
           </Route>
           <Route path="/EditBook/:recordId" exact={true}>
             <AddToBook />
+          </Route>
+          <Route path="/Villas" exact={true}>
+            <Villas />
           </Route>
         </IonRouterOutlet>
       </IonSplitPane>

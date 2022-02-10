@@ -1,4 +1,4 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar , IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonAvatar,IonIcon,IonFabButton,IonFab, IonSearchbar } from '@ionic/react';
+import { IonButtons, IonThumbnail, IonImg, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar , IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonAvatar,IonIcon,IonFabButton,IonFab, IonSearchbar } from '@ionic/react';
 import { add, pencil, pencilSharp, trash, trashBin,} from 'ionicons/icons';
 import { useParams } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
@@ -58,9 +58,10 @@ const Books = () => {
         {bookList.map((data:any)=>{
           return(
             <IonItem key={data.id}>
-            <IonAvatar slot="start">                
-              <img src={data.cover} />
-            </IonAvatar>  
+              <IonThumbnail slot="start">
+            <IonImg src={data.cover} />
+          </IonThumbnail>
+           
             <IonLabel>
               <h2>{data.title}</h2>
               <h3>{data.author}</h3>
